@@ -1,0 +1,14 @@
+{
+  "name": "07-cli",
+  "version": "1.0.0",
+  "description": "CRUD",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "wellington bezerra",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.0.3"
+  }
+}

@@ -35,7 +35,8 @@ describe('Star Wars Tests', function () {
             .get('/?search=r2-d2&format=json')
             .reply(200, response)
     })
-
+    
+    //async function({}) === async()=>{}
     it('deve buscar o r2d2 com o formato correto', async () => {
         const expected = [{
             nome: 'R2-D2',
