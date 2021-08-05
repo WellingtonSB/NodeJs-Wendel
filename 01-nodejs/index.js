@@ -16,16 +16,21 @@ function obterUsuario(callback){
 }
 
 function obterTelefone(idUsuario,callback){
-setTimeout(function(){
-    return{
+setTimeout(()=>{
+    return callback(null,{
         telefone:' 99999-9999',
-        ddd:'11'
-    }
+        ddd:11
+    })
 },2000)
 }
 
-function obterEndereco(idUsuario){
-
+function obterEndereco(idUsuario,callback){
+    setTimeout(()=>{
+        return callback(null,{
+            rua:'Av.Paulista',
+            numero: 21
+        })
+    },3000)
 }
 obterUsuario(function resolverUsuario(error,usuario){
 
@@ -33,12 +38,32 @@ obterUsuario(function resolverUsuario(error,usuario){
         console.log('Deu ruim em usuario',error)
         return ;
     }
+    obterTelefone(usuario.id,function resolverTelefone(error1,telefone){
+        if(error1){
+            console.log('Deu ruim em telefone',error)
+            return ;
+        }
+        obterEndereco(usuario.id,function resolverEndereco(error2,endereco){
+            if(error2){
+                console.log('Deu ruim em endereco',error)
+                return ;
+            } 
+            console.log(`
+            Nome:${usuario.nome},
+            Endereco:${endereco.rua},${endereco.numero}
+            Telefone: ${telefone.ddd},${telefone.numero}
+            `)
+        })
+    })
+
 })
-const usuario = obterUsuario()
+
+
+/* const usuario = obterUsuario()
 const telefone = obterTelefone(usuario.id)
 
 console.log('usuario',usuario)
-console.log('telefone',telefone)
+console.log('telefone',telefone) */
 
 
 /*      Observações:
