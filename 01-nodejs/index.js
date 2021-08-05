@@ -70,5 +70,5 @@ console.log('telefone',telefone) */
    
 No Js valores: null || "" || 0 === false;
 Por padrão o Callback é passado como ultimo parametro
-    
+Convesão callback(primeiro parametro é o erro, segundo parametro é sucesso)
 */
