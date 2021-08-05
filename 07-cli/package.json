@@ -4,11 +4,14 @@
   "description": "CRUD",
   "main": "test.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -w --reporter nyan"
   },
   "author": "wellington bezerra",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^9.0.3"
+  },
+  "dependencies": {
+    "commander": "^2.18.0"
   }
 }
