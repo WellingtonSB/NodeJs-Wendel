@@ -9,7 +9,7 @@
   "author": "wellington bezerra",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^9.0.3"
+    "mocha": "^9.2.2"
   },
   "dependencies": {
     "commander": "^2.18.0"
