@@ -9,7 +9,7 @@
   "author": "wellington bezerra",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.2"
   },
   "devDependencies": {
     "mocha": "^9.0.3"
